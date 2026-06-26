@@ -1,75 +1,116 @@
-## ✨ Overview
+# Project Jarvis - AI Desktop Assistant
 
-MARK XLVI represents a massive milestone in the Jarvis series, evolving into a fully connected, highly persistent, and remote-accessible system. It completely bridges the gap between your mobile device, desktop OS, and human intent. Through real-time Gemini reasoning, Mark 46 allows you to control your PC from your phone, share large files securely, and maintain deep contextual conversations across sessions.
-
-It's not just an assistant — it's an extension of your digital life.
+A powerful AI-powered desktop assistant built with Python, featuring real-time voice interaction, system control, visual awareness, and remote mobile access.
 
 ---
 
-## 🚀 Capabilities
+## ✨ Features
 
-### Core Features
 | Feature | Description |
-|---|---|
-| 🎙️ Real-time Voice | Ultra-low latency conversation in any language |
+|---------|-------------|
+| 🎙️ Voice Interaction | Natural conversation with ultra-low latency |
 | 🖥️ System Control | Launch apps, manage files, execute terminal commands |
-| 🧩 Autonomous Tasks | High-level planning for complex, multi-step goals |
-| 👁️ Visual Awareness | Real-time screen processing and webcam vision |
-| 🧠 Persistent Memory | Deeply remembers your projects, preferences, and personal context |
-| ⌨️ Hybrid Input | Seamlessly switch between keyboard typing and voice commands |
+| 👁️ Visual Awareness | Screen capture and webcam vision processing |
+| 🧠 Persistent Memory | Remembers preferences and context across sessions |
+| 📱 Remote Control | Control your PC from your phone via browser |
+| 📂 File Sharing | Wirelessly transfer files from phone to PC |
+| ⌨️ Hybrid Input | Switch between voice and keyboard commands |
 
 ---
 
-## 🆕 What's New in XLVI
+## 🛠️ Installation
 
-- 📱 **Full Remote Phone Control** — Take command of your entire desktop operating system directly from your smartphone, anywhere, anytime.
-- 🧠 **Advanced Long-Term Memory** — Upgraded memory architecture allows Jarvis to contextually remember past interactions, preferences, and complex workflows across reboots.
-- 🚀 **Powered by Gemini Integration** — Re-engineered from the ground up to utilize the full speed and precision of the Google Gemini API for ultimate reasoning and stability.
-- ⚡ **Next-Gen Performance & Stability** — Comprehensive system-wide optimizations delivering faster response times and rock-solid execution on Windows, Mac, and Linux.
-- 📂 **Advanced File Handling & Hybrid Input** — Fluidly switch between voice or keyboard input, and drag-and-drop code, PDFs, or images for instant analysis and automation.
-- 🔒 **Secure Mobile File Sharing** — Wirelessly and securely share files or entire folders up to 500 MB from your phone directly to your computer with complete privacy.
-
----
-
-## ⚡ Quick Start
+### 1. Clone the Repository
 
 ```bash
-git clone [https://github.com/FatihMakes/Mark-XLVI.git](https://github.com/FatihMakes/Mark-XLVI.git)
-cd Mark-XLVI
-pip install -r requirements.txt
-playwright install
-python main.py
-
+git clone https://github.com/mahidar22/project-jarvis.git
+cd project-jarvis
 ```
 
-> ⚠️ **Installation Note:** To keep the repository lightweight, some OS-specific dependencies are not bundled in `requirements.txt`. If you run into a `ModuleNotFoundError`, simply install the missing package via `pip install <module_name>` for your specific system.
+### 2. Install Dependencies
+
+```bash
+pip install -r requirements.txt
+playwright install
+```
+
+### 3. Set Up API Key
+
+Create a `.env` file in the project root:
+
+```env
+GOOGLE_API_KEY=your_gemini_api_key_here
+```
+
+Or set it as a system environment variable:
+- Press `Win + R`, type `sysdm.cpl`, Enter
+- Go to **Advanced** → **Environment Variables**
+- Add a new User variable: `GOOGLE_API_KEY` = `your_api_key`
+
+Get your free API key at: [https://aistudio.google.com/app/apikey](https://aistudio.google.com/app/apikey)
+
+### 4. Run the Application
+
+```bash
+python main.py
+```
 
 ---
 
 ## 📋 Requirements
 
-| Requirement | Details |
-| --- | --- |
-| **OS** | Windows 10/11, macOS, or Linux |
-| **Python** | 3.11 or 3.12 |
-| **Microphone** | Required for voice interaction |
-| **API Key** | Free Gemini API key |
+| Requirement | Version |
+|------------|---------|
+| Python | 3.11 or 3.12 |
+| OS | Windows 10/11, macOS, or Linux |
+| Microphone | Required for voice input |
 
 ---
 
-## ⚠️ License
+## 🔧 Project Structure
 
-Personal and non-commercial use only.
-Licensed under **[Creative Commons BY-NC 4.0](https://creativecommons.org/licenses/by-nc/4.0/)**.
+```
+project-jarvis/
+├── main.py              # Main entry point
+├── ui.py                # Graphical user interface
+├── actions/             # Action modules (files, search, media, etc.)
+├── config/              # Configuration files
+├── core/                # Core Jarvis logic
+├── dashboard/           # Web dashboard for remote control
+├── memory/              # Persistent memory system
+└── requirements.txt     # Python dependencies
+```
 
 ---
 
-## 👤 Connect with the Creator
+## ⚠️ Troubleshooting
 
-Engineered by a developer building a real-world JARVIS-style assistant.
-⭐ **Star the repository to support the journey to Mark 100.**
+**ModuleNotFoundError:**
+```bash
+pip install <missing_module_name>
+```
 
-| Platform | Link |
-| --- | --- |
-| YouTube | [@FatihMakes](https://www.youtube.com/@FatihMakes) |
-| Instagram | [@fatihmakes](https://www.instagram.com/fatihmakes) |
+**Voice not working:**
+- Ensure microphone is set as default input device
+- Check microphone permissions in system settings
+
+**API connection timeout:**
+- Verify your internet connection
+- Ensure `GOOGLE_API_KEY` is set correctly
+- Check if the API key is active at [Google AI Studio](https://aistudio.google.com/app/apikey)
+
+---
+
+## 📄 License
+
+This project is for **personal, non-commercial use only**.
+
+Licensed under **Creative Commons BY-NC 4.0**.
+
+---
+
+## 🙏 Credits
+
+Built with Google Gemini API and PyQt6.
+
+Star this repo if you find it useful!
